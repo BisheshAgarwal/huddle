@@ -1,0 +1,154 @@
+:root {
+    --color-primary: hsl(257, 40%, 49%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+/*HEADER*/
+
+.header {
+    max-width: 120rem;
+    width: 90%;
+    margin: 5vh auto 10vh auto;
+}
+
+/*CONATINER*/
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+}
+
+/*MOBILE CONTAINER*/
+
+.mobile-container img {
+    width: 100%;
+}
+
+/*TEXT CONTAINER*/
+
+.text-container {
+    padding: 2rem;
+}
+
+.heading__primary {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+}
+
+.text {
+    opacity: .8;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 1rem 5rem;
+    font-family: inherit;
+    color: var(--color-primary);
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    -webkit-box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+/*FOOTER*/
+
+.footer {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+ion-icon {
+    border: 1px solid #fff;
+    padding: .7rem;
+    border-radius: 100%;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 900px) {
+    
+    body {
+        background-image: url(../images/bg-mobile.svg);
+        background-size: cover;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-container {
+        text-align: center;
+    }
+    
+    .footer {
+        margin: 3rem auto;
+    }
+    
+    .icons {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+    
+    .logo{
+        width: 25rem;
+    }
+    
+    .logo img {
+        width: 100%;
+    }
+}
